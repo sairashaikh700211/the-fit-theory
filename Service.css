@@ -1,0 +1,296 @@
+﻿/* services.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#030303;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* GRID BACKGROUND */
+
+.services-hero,
+.services-grid-section,
+.steps-section{
+  background:
+  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+/* HERO */
+
+.services-hero{
+  padding:110px 0 90px;
+}
+
+.section-tag{
+  color:#43ff7a;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:1px;
+  display:inline-block;
+  margin-bottom:25px;
+}
+
+.services-hero h1{
+  font-size:72px;
+  line-height:1.05;
+  font-weight:800;
+  max-width:780px;
+  margin-bottom:25px;
+}
+
+.services-hero h1 span{
+  background:linear-gradient(90deg,#43ff7a,#00cfff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.services-hero p{
+  max-width:700px;
+  color:#b8b8b8;
+  font-size:22px;
+  line-height:1.7;
+  margin-bottom:45px;
+}
+
+.hero-btns{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:18px 32px;
+  border-radius:50px;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.primary-btn{
+  background:#52ff71;
+  color:#000;
+}
+
+.primary-btn:hover{
+  transform:translateY(-3px);
+}
+
+.primary-btn i{
+  margin-left:10px;
+}
+
+.secondary-btn{
+  border:1px solid rgba(255,255,255,0.15);
+  color:#fff;
+  background:transparent;
+}
+
+.secondary-btn:hover{
+  border-color:#52ff71;
+  color:#52ff71;
+}
+
+/* SERVICES GRID */
+
+.services-grid-section{
+  padding:40px 0 100px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+
+.service-card{
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:22px;
+  padding:32px;
+  background:#050505;
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  border-color:#43ff7a;
+}
+
+.service-card.active{
+  border-color:#43ff7a;
+  box-shadow:0 0 40px rgba(67,255,122,0.08);
+}
+
+.icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:28px;
+  font-size:22px;
+}
+
+.icon.green{
+  color:#43ff7a;
+}
+
+.icon.blue{
+  color:#00bfff;
+}
+
+.service-card h3{
+  font-size:32px;
+  line-height:1.2;
+  margin-bottom:18px;
+}
+
+.service-card p{
+  color:#b9b9b9;
+  line-height:1.8;
+  margin-bottom:24px;
+  font-size:16px;
+}
+
+.service-card ul{
+  list-style:none;
+}
+
+.service-card ul li{
+  color:#d7d7d7;
+  margin-bottom:14px;
+  position:relative;
+  padding-left:26px;
+  line-height:1.6;
+}
+
+.service-card ul li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#43ff7a;
+  font-weight:700;
+}
+
+/* STEPS SECTION */
+
+.steps-section{
+  padding:40px 0 120px;
+}
+
+.steps-section h2{
+  font-size:60px;
+  margin-top:18px;
+  margin-bottom:50px;
+  line-height:1.1;
+}
+
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+
+.step-card{
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:36px;
+  background:#050505;
+}
+
+.step-number{
+  font-size:64px;
+  font-weight:800;
+  color:#43ff7a;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+.step-card h3{
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.step-card p{
+  color:#b8b8b8;
+  line-height:1.8;
+  font-size:16px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .services-grid,
+  .steps-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .services-hero h1{
+    font-size:58px;
+  }
+
+  .steps-section h2{
+    font-size:48px;
+  }
+}
+
+@media(max-width:768px){
+
+  .services-grid,
+  .steps-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services-hero{
+    padding-top:80px;
+  }
+
+  .services-hero h1{
+    font-size:46px;
+  }
+
+  .services-hero p{
+    font-size:18px;
+  }
+
+  .steps-section h2{
+    font-size:40px;
+  }
+
+  .service-card h3,
+  .step-card h3{
+    font-size:26px;
+  }
+}
+
+@media(max-width:480px){
+
+  .services-hero h1{
+    font-size:38px;
+  }
+
+  .steps-section h2{
+    font-size:32px;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+}
